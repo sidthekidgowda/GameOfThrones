@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GameOfThrones</string>
+    <string name="welcome_to_got">Welcome to Game of Thrones</string>
+    <string name="go_to_books">Go To Books</string>
 </resources>
