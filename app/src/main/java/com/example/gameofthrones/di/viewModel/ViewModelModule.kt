@@ -6,6 +6,7 @@ import com.example.gameofthrones.viewModel.BooksViewModel
 import com.example.gameofthrones.viewModel.BooksViewModelImpl
 import dagger.Binds
 import dagger.Module
+import dagger.multibindings.IntoMap
 import javax.inject.Provider
 import kotlin.reflect.KClass
 
@@ -16,6 +17,7 @@ abstract class ViewModelModule {
     abstract fun bindsViewModelFactory(factory: ViewModelFactory): ViewModelProvider.Factory
 
     @Binds
+    @IntoMap
     @ViewModelKey(BooksViewModelImpl::class)
     abstract fun bindsBooksViewModel(viewModel: BooksViewModelImpl): ViewModel
 }
