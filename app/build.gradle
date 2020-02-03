@@ -61,7 +61,7 @@ dependencies {
 
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
-    implementation "com.squareup.retrofit2:adapter-rxjava:$retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit"
     implementation 'com.squareup.okhttp3:logging-interceptor:3.13.1'
 
@@ -70,6 +70,7 @@ dependencies {
 
     //RxJava
     implementation "io.reactivex.rxjava2:rxjava:$rx_java"
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
     //room
     implementation "androidx.room:room-runtime:$room_version"

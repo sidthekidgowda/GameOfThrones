@@ -28,7 +28,7 @@ object NetworkModule {
 
     @JvmStatic
     @Provides
-    @Reusableso
+    @Reusable
     fun providesRetrofitService(okHttpClient: OkHttpClient): Retrofit {
         return Retrofit.Builder().baseUrl("https://www.anapioficeandfire.com/api")
             .addConverterFactory(GsonConverterFactory.create())
