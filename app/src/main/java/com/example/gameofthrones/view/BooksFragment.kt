@@ -25,7 +25,7 @@ class BooksFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        //@TODO - set up dagger
+        (activity as WelcomeActivity).activityComponent.inject(this)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
