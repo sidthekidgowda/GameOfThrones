@@ -1,11 +1,12 @@
 package com.example.gameofthrones.di.subcomponents
 
+import com.example.gameofthrones.di.viewModel.ViewModelModule
 import com.example.gameofthrones.view.BooksFragment
 import com.example.gameofthrones.view.WelcomeActivity
 import dagger.Subcomponent
 
 @ActivityScope
-@Subcomponent
+@Subcomponent(modules = [ViewModelModule::class])
 interface ActivityComponent {
 
     @Subcomponent.Factory
