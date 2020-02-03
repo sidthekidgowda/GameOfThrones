@@ -61,6 +61,9 @@ dependencies {
 
     //retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.13.1'
 
     //guava
     api 'com.google.guava:guava:27.0.1-android'
