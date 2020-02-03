@@ -1,6 +1,7 @@
 package com.example.gameofthrones.di
 
 import android.app.Application
+import com.example.gameofthrones.di.datasource.DataSourceModule
 import com.example.gameofthrones.di.network.NetworkModule
 import com.example.gameofthrones.di.subcomponents.ActivityComponent
 import com.example.gameofthrones.di.subcomponents.AppSubcomponents
@@ -10,7 +11,7 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AppSubcomponents::class, ViewModelModule::class, NetworkModule::class])
+@Component(modules = [AppSubcomponents::class, ViewModelModule::class, NetworkModule::class, DataSourceModule::class])
 interface GameOfThronesComponent {
 
     @Component.Factory
