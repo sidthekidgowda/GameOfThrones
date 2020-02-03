@@ -3,12 +3,13 @@ package com.example.gameofthrones.di
 import android.app.Application
 import com.example.gameofthrones.di.subcomponents.ActivityComponent
 import com.example.gameofthrones.di.subcomponents.AppSubcomponents
+import com.example.gameofthrones.di.viewModel.ViewModelModule
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AppSubcomponents::class])
+@Component(modules = [AppSubcomponents::class, ViewModelModule::class])
 interface GameOfThronesComponent {
 
     @Component.Factory
