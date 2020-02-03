@@ -13,7 +13,7 @@
         android:textColor="@color/colorBlack"
         android:layout_gravity="center"
         android:layout_margin="@dimen/dp_20"
-        android:text="@string/welcome_to_got"/>
+        android:text="@string/game_of_thrones_books"/>
 
     <ProgressBar
         android:id="@+id/loading_spinner"
