@@ -32,7 +32,7 @@ object NetworkModule {
     @Provides
     @Reusable
     fun providesRetrofitService(okHttpClient: OkHttpClient): Retrofit {
-        return Retrofit.Builder().baseUrl("https://www.anapioficeandfire.com/api")
+        return Retrofit.Builder().baseUrl("https://www.anapioficeandfire.com/api/")
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.createWithScheduler(Schedulers.io()))
             .client(okHttpClient)

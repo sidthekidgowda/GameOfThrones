@@ -6,8 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.example.gameofthrones.R
 import com.example.gameofthrones.viewModel.BooksViewModelImpl
+import kotlinx.android.synthetic.main.got_bookfragment.*
 import javax.inject.Inject
 
 class BooksFragment : Fragment() {
@@ -20,8 +23,7 @@ class BooksFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        //@TODO set up view
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return inflater.inflate(R.layout.got_bookfragment, container, false)
     }
 
     override fun onAttach(context: Context) {
@@ -33,5 +35,18 @@ class BooksFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val bookViewModel = ViewModelProvider(this, viewModelFactory).get(BooksViewModelImpl::class.java)
+
+        //start spinner
+        loading_spinner.visibility = View.VISIBLE
+        bookViewModel.getListOfBooks()
+        bookViewModel.getListOfBooksLiveData().observe(viewLifecycleOwner, Observer { books ->
+            books_recycler_view.visibility = View.VISIBLE
+            loading_spinner.visibility = View.GONE
+//            val booksRecyclerAdapter = BooksRecyclerAdapter(context, books)
+//            books_recycler_view.adapter = booksRecyclerAdapter
+
+
+        })
+
     }
 }
