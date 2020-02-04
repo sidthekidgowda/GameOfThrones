@@ -3,4 +3,6 @@
     <string name="welcome_to_got">Welcome to Game of Thrones</string>
     <string name="game_of_thrones_books">Game of Thrones books</string>
     <string name="go_to_books">Go To Books</string>
+    <string name="number_of_pages">pages</string>
+    <string name="author">Author:</string>
 </resources>

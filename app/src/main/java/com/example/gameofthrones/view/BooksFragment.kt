@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gameofthrones.R
 import com.example.gameofthrones.viewModel.BooksViewModelImpl
 import kotlinx.android.synthetic.main.got_bookfragment.*
@@ -42,10 +43,9 @@ class BooksFragment : Fragment() {
         bookViewModel.getListOfBooksLiveData().observe(viewLifecycleOwner, Observer { books ->
             books_recycler_view.visibility = View.VISIBLE
             loading_spinner.visibility = View.GONE
-//            val booksRecyclerAdapter = BooksRecyclerAdapter(context, books)
-//            books_recycler_view.adapter = booksRecyclerAdapter
-
-
+            val booksRecyclerAdapter = BooksRecyclerAdapter(context, books)
+            books_recycler_view.adapter = booksRecyclerAdapter
+            books_recycler_view.layoutManager = LinearLayoutManager(context)
         })
 
     }
