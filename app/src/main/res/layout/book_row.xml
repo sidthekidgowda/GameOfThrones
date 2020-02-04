@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="bookTitle"
+            type="String" />
+
+        <variable
+            name="bookPages"
+            type="String" />
+
+        <variable
+            name="bookAuthor"
+            type="String" />
+
+        <variable
+            name="bookDate"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_20"
+            android:textColor="@color/colorBlack"
+            android:textSize="@dimen/text_size_20"
+            android:text="@{bookTitle}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Game of Thrones" />
+
+        <TextView
+            android:id="@+id/pages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBaseline_toBaselineOf="@id/title"
+            android:text="@{bookPages}"
+            android:textSize="@dimen/text_size_12"
+            tools:text="695 pages"/>
+
+        <TextView
+            android:id="@+id/author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_4"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:text="@{bookAuthor}"
+            android:textSize="@dimen/text_size_16"
+            tools:text="Author: George R.R Martin"/>
+
+        <TextView
+            android:id="@+id/publish_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBaseline_toBaselineOf="@id/author"
+            app:layout_constraintEnd_toEndOf="@id/pages"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="@color/colorBlue"
+            android:text="@{bookDate}"
+            tools:text="12/20/1985"/>
+
+        <View
+            android:id="@+id/line_separator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_2"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@color/colorGrey"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/author"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
