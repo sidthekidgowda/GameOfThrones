@@ -10,11 +10,11 @@ class BooksRecyclerAdapter(private val context: Context?,
                            private val books: List<Book>) : RecyclerView.Adapter<BooksRecyclerAdapter.BooksViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BooksViewHolder {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun onBindViewHolder(holder: BooksViewHolder, position: Int) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     override fun getItemCount(): Int {
@@ -22,6 +22,6 @@ class BooksRecyclerAdapter(private val context: Context?,
     }
 
     class BooksViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
-        //@TODO set up layout for book
+
     }
 }
