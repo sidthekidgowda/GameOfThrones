@@ -1,6 +1,6 @@
 package com.example.gameofthrones.datasource
 
-import com.example.gameofthrones.api.GameOfThronesService
+import com.example.gameofthrones.service.GameOfThronesService
 import com.example.gameofthrones.model.Book
 import io.reactivex.Single
 import javax.inject.Inject

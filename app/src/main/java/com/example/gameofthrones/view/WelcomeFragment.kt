@@ -20,6 +20,9 @@ class WelcomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (activity as WelcomeActivity).setTitle(getString(R.string.game_of_thrones))
+
         goto_books_button.setOnClickListener {
             (activity as WelcomeActivity).supportFragmentManager
                 .beginTransaction()
