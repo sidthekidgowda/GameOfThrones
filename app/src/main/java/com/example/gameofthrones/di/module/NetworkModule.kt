@@ -1,6 +1,6 @@
-package com.example.gameofthrones.di.network
+package com.example.gameofthrones.di.module
 
-import com.example.gameofthrones.api.GameOfThronesService
+import com.example.gameofthrones.service.GameOfThronesService
 import dagger.Module
 import dagger.Provides
 import dagger.Reusable

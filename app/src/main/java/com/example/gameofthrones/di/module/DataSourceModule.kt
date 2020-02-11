@@ -1,4 +1,4 @@
-package com.example.gameofthrones.di.datasource
+package com.example.gameofthrones.di.module
 
 import com.example.gameofthrones.datasource.GameOfThronesDataSource
 import com.example.gameofthrones.datasource.GameOfThronesDataSourceImpl

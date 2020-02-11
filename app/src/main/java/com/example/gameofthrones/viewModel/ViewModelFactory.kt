@@ -1,4 +1,4 @@
-package com.example.gameofthrones.di.viewModel
+package com.example.gameofthrones.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
