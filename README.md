@@ -8,4 +8,10 @@ I used the api https://www.anapioficeandfire.com to retrieve all the information
 
 I will be periodically adding new features to the application as this will help me become a better Android Developer.
 
+# Home Screen
+
 <img src=https://github.com/sidthekidgowda/GameOfThrones/blob/master/app/src/main/res/drawable/gameofthrones.png width="200" height="400">
+
+# Books Screen
+
+<img src=https://github.com/sidthekidgowda/GameOfThrones/blob/master/app/src/main/res/drawable/Books.png width="200" height="400>
