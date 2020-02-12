@@ -6,6 +6,8 @@ I decided to make an app that can list all the books that are part of the Game o
 
 I used the api https://www.anapioficeandfire.com to retrieve all the information for this application.
 
+The application makes a service call to get all the books and saves the result to disk using Room as a database provider.
+
 This app was written fully in Kotlin.
 
 ### Technologies used: 
