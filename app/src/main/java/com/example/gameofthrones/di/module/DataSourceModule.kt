@@ -9,26 +9,23 @@ import com.example.gameofthrones.room.BooksDatabase
 import com.example.gameofthrones.service.GameOfThronesService
 import dagger.Module
 import dagger.Provides
-import javax.inject.Singleton
 
 @Module
 class DataSourceModule {
 
     @Provides
     fun bindsDataSource(service: GameOfThronesService,
-                        database: BooksDatabase): GameOfThronesDataSource {
-        return GameOfThronesDataSourceImpl(service, database)
+                        booksDao: BooksDao): GameOfThronesDataSource {
+        return GameOfThronesDataSourceImpl(service, booksDao)
     }
 
     @Provides
-    @Singleton
     fun providesBooksDatabase(app: Application): BooksDatabase {
         return Room.databaseBuilder(app, BooksDatabase::class.java, "books_db")
             .build()
     }
 
     @Provides
-    @Singleton
     fun providesBooksDao(database: BooksDatabase): BooksDao {
         return database.booksDao()
     }
