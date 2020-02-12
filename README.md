@@ -11,10 +11,10 @@ This app was written fully in Kotlin.
 ### Technologies used: 
 Android Architecture Components(Room/LiveData/ViewModel), RxJava, Dagger, Retrofit, Gson
 
-# Home Screen
+### Home Screen
 
 <img src=https://github.com/sidthekidgowda/GameOfThrones/blob/master/app/src/main/res/drawable/gameofthrones.png width="200" height="400">
 
-# Books Screen
+### Books Screen
 
 <img src=https://github.com/sidthekidgowda/GameOfThrones/blob/master/app/src/main/res/drawable/Books.png width="200" height="400">
