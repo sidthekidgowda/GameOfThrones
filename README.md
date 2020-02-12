@@ -6,7 +6,10 @@ I decided to make an app that can list all the books that are part of the Game o
 
 I used the api https://www.anapioficeandfire.com to retrieve all the information for this application.
 
-I will be periodically adding new features to the application as this will help me become a better Android Developer.
+This app was written fully in Kotlin.
+
+### Technologies used: 
+Android Architecture Components(Room/LiveData/ViewModel), RxJava, Dagger, Retrofit, Gson
 
 # Home Screen
 
@@ -14,4 +17,4 @@ I will be periodically adding new features to the application as this will help 
 
 # Books Screen
 
-<img src=https://github.com/sidthekidgowda/GameOfThrones/blob/master/app/src/main/res/drawable/Books.png width="200" height="400>
+<img src=https://github.com/sidthekidgowda/GameOfThrones/blob/master/app/src/main/res/drawable/Books.png width="200" height="400">
