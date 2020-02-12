@@ -1,4 +1,4 @@
-package com.example.gameofthrones.api
+package com.example.gameofthrones.service
 
 import com.example.gameofthrones.model.Book
 import io.reactivex.Single

@@ -1,17 +1,17 @@
 package com.example.gameofthrones.di
 
 import android.app.Application
-import com.example.gameofthrones.di.datasource.DataSourceModule
-import com.example.gameofthrones.di.network.NetworkModule
+import com.example.gameofthrones.di.module.DataSourceModule
+import com.example.gameofthrones.di.module.NetworkModule
+import com.example.gameofthrones.di.module.ViewModelModule
 import com.example.gameofthrones.di.subcomponents.ActivityComponent
-import com.example.gameofthrones.di.subcomponents.AppSubcomponents
-import com.example.gameofthrones.di.viewModel.ViewModelModule
+import com.example.gameofthrones.di.subcomponents.ActivityModule
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AppSubcomponents::class, ViewModelModule::class, NetworkModule::class, DataSourceModule::class])
+@Component(modules = [ActivityModule::class, ViewModelModule::class, NetworkModule::class, DataSourceModule::class])
 interface GameOfThronesComponent {
 
     @Component.Factory

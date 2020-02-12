@@ -31,7 +31,7 @@ class BooksRecyclerAdapter(private val context: Context?,
             binding.bookTitle = book.bookName
             binding.bookAuthor = "${context?.getString(R.string.author)} ${book.authors.first()}"
             binding.bookPages = noOfPages
-            binding.bookDate = book.releaseDate
+            binding.bookDate = book.getFormattedDate()
         }
     }
 }

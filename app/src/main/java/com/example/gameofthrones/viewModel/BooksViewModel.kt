@@ -6,4 +6,7 @@ import com.example.gameofthrones.model.Book
 interface BooksViewModel {
     fun getListOfBooks()
     fun getListOfBooksLiveData(): LiveData<List<Book>>
+
+    //View Functions
+    fun loadingSpinnerVisibility(): LiveData<Int>
 }

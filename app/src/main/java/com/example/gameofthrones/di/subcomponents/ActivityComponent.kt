@@ -1,8 +1,7 @@
 package com.example.gameofthrones.di.subcomponents
 
-import com.example.gameofthrones.di.datasource.DataSourceModule
+import com.example.gameofthrones.di.module.DataSourceModule
 import com.example.gameofthrones.view.BooksFragment
-import com.example.gameofthrones.view.WelcomeActivity
 import dagger.Subcomponent
 
 @ActivityScope
@@ -14,6 +13,5 @@ interface ActivityComponent {
         fun create(): ActivityComponent
     }
 
-    fun inject(activity: WelcomeActivity)
     fun inject(fragment: BooksFragment)
 }

@@ -20,6 +20,9 @@ android {
     dataBinding {
         enabled = true
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -69,13 +72,16 @@ dependencies {
     //guava
     api 'com.google.guava:guava:27.0.1-android'
 
+    //apache
+    implementation 'org.apache.commons:commons-lang3:3.8.1'
+
     //RxJava
     implementation "io.reactivex.rxjava2:rxjava:$rx_java"
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
     //room
     implementation "androidx.room:room-runtime:$room_version"
-    annotationProcessor "androidx.room:room-compiler:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
     implementation "androidx.room:room-ktx:$room_version"
     implementation "androidx.room:room-rxjava2:$room_version"
     implementation "androidx.room:room-guava:$room_version"

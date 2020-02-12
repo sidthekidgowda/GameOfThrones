@@ -1,14 +1,13 @@
-package com.example.gameofthrones.di.viewModel
+package com.example.gameofthrones.di.module
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.gameofthrones.viewModel.BooksViewModel
+import com.example.gameofthrones.viewModel.ViewModelFactory
+import com.example.gameofthrones.viewModel.ViewModelKey
 import com.example.gameofthrones.viewModel.BooksViewModelImpl
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
-import javax.inject.Provider
-import kotlin.reflect.KClass
 
 @Module
 abstract class ViewModelModule {
