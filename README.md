@@ -8,4 +8,4 @@ I used the api https://www.anapioficeandfire.com to retrieve all the information
 
 I will be periodically adding new features to the application as this will help me become a better Android Developer.
 
-![First Screen](https://github.com/sidthekidgowda/GameOfThrones/blob/master/app/src/main/res/drawable/gameofthrones.png = 250x250)
+![First Screen](https://github.com/sidthekidgowda/GameOfThrones/blob/master/app/src/main/res/drawable/gameofthrones.png =250x250)
