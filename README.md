@@ -19,4 +19,4 @@ Android Architecture Components(Room/LiveData/ViewModel/Navigation Component), R
 
 ### Books Screen
 
-<img src=https://github.com/sidthekidgowda/GameOfThrones/blob/master/app/src/main/res/drawable/Books.png width="200" height="400">
+<img src=https://github.com/sidthekidgowda/GameOfThrones/blob/master/app/src/main/res/drawable/books.png width="200" height="400">
