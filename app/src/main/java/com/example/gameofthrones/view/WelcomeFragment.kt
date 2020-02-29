@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.findNavController
 import com.example.gameofthrones.R
 import kotlinx.android.synthetic.main.got_mainfragment.*
 
@@ -24,11 +25,7 @@ class WelcomeFragment : Fragment() {
         (activity as WelcomeActivity).setTitle(getString(R.string.game_of_thrones))
 
         goto_books_button.setOnClickListener {
-            (activity as WelcomeActivity).supportFragmentManager
-                .beginTransaction()
-                .replace(id, BooksFragment())
-                .addToBackStack(null)
-                .commit()
+            it.findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToBooksFragment())
         }
     }
 }

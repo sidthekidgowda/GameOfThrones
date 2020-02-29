@@ -1,15 +1,20 @@
 package com.example.gameofthrones.view
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.NavController
+import androidx.navigation.findNavController
+import androidx.navigation.ui.NavigationUI
 import com.example.gameofthrones.R
 import com.example.gameofthrones.application.GameOfThronesApplication
+import com.example.gameofthrones.databinding.ActivityMainBinding
 import com.example.gameofthrones.di.subcomponents.ActivityComponent
 
 class WelcomeActivity : AppCompatActivity() {
 
     lateinit var activityComponent: ActivityComponent
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         //set up dagger component and inject
@@ -19,28 +24,14 @@ class WelcomeActivity : AppCompatActivity() {
             .create()
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        navController = findNavController(R.id.nav_host_fragment)
 
-        if (savedInstanceState == null) {
-            supportFragmentManager
-                .beginTransaction()
-                .add(R.id.fragment_container, WelcomeFragment())
-                .commit()
-        }
+        NavigationUI.setupActionBarWithNavController(this, navController)
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        if (item.itemId == android.R.id.home) {
-            onBackPressed()
-            return true
-        }
-        return super.onOptionsItemSelected(item)
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp()
     }
-    override fun onBackPressed() {
-        if (supportFragmentManager.backStackEntryCount > 0) {
-            supportFragmentManager.popBackStack()
-            supportActionBar?.setHomeButtonEnabled(false)
-            supportActionBar?.setDisplayHomeAsUpEnabled(false)
-        }
-    }
+
 }
