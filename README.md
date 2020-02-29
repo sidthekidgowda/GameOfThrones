@@ -11,7 +11,7 @@ The application makes a service call to get all the books and saves the result t
 This app was written fully in Kotlin.
 
 ### Technologies used: 
-Android Architecture Components(Room/LiveData/ViewModel), RxJava, Dagger, Retrofit, Gson
+Android Architecture Components(Room/LiveData/ViewModel/Navigation Component), RxJava, Dagger, Retrofit, Gson
 
 ### Home Screen
 
