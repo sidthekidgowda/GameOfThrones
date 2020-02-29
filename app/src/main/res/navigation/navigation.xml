@@ -12,9 +12,7 @@
         tools:layout="@layout/got_mainfragment">
         <action
             android:id="@+id/action_welcomeFragment_to_booksFragment"
-            app:destination="@id/booksFragment"
-            app:popUpTo="@+id/welcomeFragment"
-            app:popUpToInclusive="false" />
+            app:destination="@id/booksFragment" />
     </fragment>
     <fragment
         android:id="@+id/booksFragment"

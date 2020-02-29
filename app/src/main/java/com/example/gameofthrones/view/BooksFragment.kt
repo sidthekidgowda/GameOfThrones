@@ -40,8 +40,6 @@ class BooksFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as WelcomeActivity).setTitle(getString(R.string.books))
-        (activity as WelcomeActivity).supportActionBar?.setHomeButtonEnabled(true)
-        (activity as WelcomeActivity).supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val bookViewModel = ViewModelProvider(this, viewModelFactory).get(BooksViewModelImpl::class.java)
         binding.viewModel = bookViewModel
