@@ -1,9 +1,10 @@
 package com.example.gameofthrones.di
 
 import android.app.Application
+import com.android.viewmodelfactory.ViewModelModule
+import com.example.gameofthrones.di.module.BooksViewModelModule
 import com.example.gameofthrones.di.module.DataSourceModule
 import com.example.gameofthrones.di.module.NetworkModule
-import com.example.gameofthrones.di.module.ViewModelModule
 import com.example.gameofthrones.di.subcomponents.ActivityComponent
 import com.example.gameofthrones.di.subcomponents.ActivityModule
 import dagger.BindsInstance
@@ -11,7 +12,11 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [ActivityModule::class, ViewModelModule::class, NetworkModule::class, DataSourceModule::class])
+@Component(modules = [ActivityModule::class,
+    BooksViewModelModule::class,
+    ViewModelModule::class,
+    NetworkModule::class,
+    DataSourceModule::class])
 interface GameOfThronesComponent {
 
     @Component.Factory
