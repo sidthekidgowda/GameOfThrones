@@ -2,8 +2,8 @@ package com.example.gameofthrones.di.module
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.android.viewmodelfactory.ViewModelFactory
-import com.android.viewmodelfactory.ViewModelKey
+import com.android.rxviewmodelutility.ViewModelFactory
+import com.android.rxviewmodelutility.ViewModelKey
 import com.example.gameofthrones.viewModel.BooksViewModelImpl
 import dagger.Binds
 import dagger.Module
