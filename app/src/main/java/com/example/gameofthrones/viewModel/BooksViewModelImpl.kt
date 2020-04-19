@@ -5,9 +5,9 @@ import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.android.rxviewmodelutility.addUIScheduler
 import com.example.gameofthrones.datasource.GameOfThronesDataSource
 import com.example.gameofthrones.model.Book
-import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 
@@ -25,7 +25,7 @@ class BooksViewModelImpl @Inject constructor(private val dataSource: GameOfThron
             dataSource.getListOfBooks()
                 .doOnSubscribe { loadingSpinnerVisibilityLiveData.postValue(View.VISIBLE) }
                 .doFinally { loadingSpinnerVisibilityLiveData.postValue(View.GONE) }
-                .observeOn(AndroidSchedulers.mainThread())
+                .addUIScheduler()
                 .subscribe({ books -> listOfBooksLiveData.postValue(books) },
                             { error -> Log.e("Error: ", error.message) }))
     }

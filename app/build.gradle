@@ -86,8 +86,8 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$rx_java"
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
-    //ViewModelFactory
-    implementation 'com.github.sidthekidgowda:ViewModelFactory:1.0.1'
+    //RxViewModel
+    implementation 'com.github.sidthekidgowda:rxviewmodelutility:1.0'
 
     //room
     implementation "androidx.room:room-runtime:$room_version"
