@@ -37,19 +37,22 @@ android {
     }
 }
 
+ext {
+    dagger_version = "2.25.2"
+    androidx_version = "1.1.0"
+    android_core_testing="2.0.0"
+    room_version = "2.2.4"
+    rx_java = "2.2.9"
+    retrofit = "2.7.1"
+    robolectric = "4.3"
+    junit = "4.12"
+    androidX_core_version = "1.2.0"
+    androidX_test_rules = "1.1.0"
+    lifecycle_version = "2.2.0"
+    nav_version = "2.2.1"
+}
+
 dependencies {
-    def dagger_version = "2.25.2"
-    def androidx_version = "1.1.0"
-    def android_core_testing="2.0.0"
-    def room_version = "2.2.4"
-    def rx_java = "2.2.9"
-    def retrofit = "2.7.1"
-    def robolectric = "4.3"
-    def junit = "4.12"
-    def androidX_core_version = "1.2.0"
-    def androidX_test_rules = "1.1.0"
-    def lifecycle_version = "2.2.0"
-    def nav_version = "2.2.1"
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
@@ -87,7 +90,7 @@ dependencies {
     implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
 
     //RxViewModel
-    implementation 'com.github.sidthekidgowda:rxviewmodelutility:1.0'
+    implementation 'com.github.sidthekidgowda:rxviewmodelutility:1.2'
 
     //room
     implementation "androidx.room:room-runtime:$room_version"
