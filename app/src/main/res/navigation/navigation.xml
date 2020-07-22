@@ -8,7 +8,6 @@
     <fragment
         android:id="@+id/welcomeFragment"
         android:name="com.example.gameofthrones.view.WelcomeFragment"
-        android:label="WelcomeFragment"
         tools:layout="@layout/got_mainfragment">
         <action
             android:id="@+id/action_welcomeFragment_to_booksFragment"
@@ -17,6 +16,5 @@
     <fragment
         android:id="@+id/booksFragment"
         android:name="com.example.gameofthrones.view.BooksFragment"
-        android:label="BooksFragment"
         tools:layout="@layout/got_bookfragment"/>
 </navigation>

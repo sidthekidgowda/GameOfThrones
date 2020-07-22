@@ -1,25 +1,23 @@
 package com.example.gameofthrones.view
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.gameofthrones.R
 import com.example.gameofthrones.databinding.GotBookfragmentBinding
-import com.example.gameofthrones.viewModel.BooksViewModelImpl
+import com.example.gameofthrones.viewModel.BooksViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.got_bookfragment.*
-import javax.inject.Inject
 
+@AndroidEntryPoint
 class BooksFragment : Fragment() {
 
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
     private lateinit var binding: GotBookfragmentBinding
 
     override fun onCreateView(
@@ -32,16 +30,11 @@ class BooksFragment : Fragment() {
         return binding.root
     }
 
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        (activity as WelcomeActivity).activityComponent.inject(this)
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         (activity as WelcomeActivity).setTitle(getString(R.string.books))
 
-        val bookViewModel = ViewModelProvider(this, viewModelFactory).get(BooksViewModelImpl::class.java)
+        val bookViewModel: BooksViewModel by viewModels()
         binding.viewModel = bookViewModel
 
         bookViewModel.getListOfBooks()

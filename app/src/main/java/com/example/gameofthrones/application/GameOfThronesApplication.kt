@@ -1,12 +1,7 @@
 package com.example.gameofthrones.application
 
-import androidx.multidex.MultiDexApplication
-import com.example.gameofthrones.di.DaggerGameOfThronesComponent
-import com.example.gameofthrones.di.GameOfThronesComponent
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class GameOfThronesApplication : MultiDexApplication() {
-
-    val component: GameOfThronesComponent by lazy {
-        DaggerGameOfThronesComponent.factory().create(this)
-    }
-}
+@HiltAndroidApp
+class GameOfThronesApplication : Application()
