@@ -115,6 +115,7 @@ dependencies {
     testImplementation "androidx.test:rules:$androidX_test_rules"
     testImplementation "androidx.room:room-testing:$room_version"
     testImplementation "androidx.arch.core:core-testing:$android_core_testing"
+    testImplementation "io.mockk:mockk:1.10.0"
 
     //Android Test-espresso/Dagger
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
