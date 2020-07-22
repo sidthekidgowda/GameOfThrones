@@ -52,7 +52,6 @@ ext {
     rx_android = "2.1.1"
     rx_viewmodelutility = "1.2"
     retrofit = "2.7.1"
-    robolectric = "4.3"
     junit = "4.12"
     androidX_core_version = "1.2.0"
     androidX_test_rules = "1.1.0"
@@ -66,7 +65,7 @@ ext {
 dependencies {
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation "androidx.appcompat:appcompat:$androidx_version"
     implementation "androidx.core:core-ktx:$androidX_core_version"
     implementation "androidx.recyclerview:recyclerview:$androidx_version"
@@ -87,9 +86,6 @@ dependencies {
     implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit"
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp3"
-
-    //guava
-    api 'com.google.guava:guava:27.0.1-android'
 
     //navigation
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
@@ -112,13 +108,10 @@ dependencies {
     implementation "androidx.room:room-rxjava2:$room_version"
     implementation "androidx.room:room-guava:$room_version"
 
-    //testing-JUnit/Mockito/Robolectric/Room
+    //testing-JUnit/Mockito/Room
     testImplementation "junit:junit:$junit"
     testImplementation "androidx.test:core:$androidX_core_version"
     testImplementation 'org.mockito:mockito-core:2.+'
-    testImplementation "org.robolectric:robolectric:$robolectric"
-    testImplementation "org.robolectric:shadows-multidex:$robolectric"
-    testImplementation "org.robolectric:shadows-supportv4:$robolectric"
     testImplementation "androidx.test:rules:$androidX_test_rules"
     testImplementation "androidx.room:room-testing:$room_version"
     testImplementation "androidx.arch.core:core-testing:$android_core_testing"

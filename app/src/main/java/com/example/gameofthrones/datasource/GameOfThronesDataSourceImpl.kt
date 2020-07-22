@@ -9,10 +9,6 @@ import javax.inject.Inject
 class GameOfThronesDataSourceImpl @Inject constructor(private val gameOfThronesService: GameOfThronesService,
                                                       private val booksDao: BooksDao) : GameOfThronesDataSource {
 
-    companion object {
-        const val TAG = "GameOfThronesDataSource"
-    }
-
     override fun getListOfBooks(): Single<List<Book>> {
 
         //retrieve from cache using dao if cache isn't empty
