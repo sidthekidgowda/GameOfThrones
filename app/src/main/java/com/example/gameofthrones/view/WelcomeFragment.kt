@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.gameofthrones.R
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.got_mainfragment.*
 
 class WelcomeFragment : Fragment() {

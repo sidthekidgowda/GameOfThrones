@@ -8,7 +8,9 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import com.example.gameofthrones.R
 import com.example.gameofthrones.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class WelcomeActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
