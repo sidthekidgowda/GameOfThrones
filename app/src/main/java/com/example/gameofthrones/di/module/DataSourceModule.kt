@@ -11,6 +11,7 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
+import javax.inject.Singleton
 
 @InstallIn(ApplicationComponent::class)
 @Module
@@ -23,6 +24,7 @@ class DataSourceModule {
     }
 
     @Provides
+    @Singleton
     fun providesBooksDatabase(app: Application): BooksDatabase {
         return Room.databaseBuilder(app, BooksDatabase::class.java, "books_db")
             .build()
